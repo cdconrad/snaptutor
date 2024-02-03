@@ -17,7 +17,7 @@ def index():
             model="gpt-3.5-turbo",
             temperature=0.6,
             messages=[
-                {"role": "system","content": "Students will provide you with short reflections on emerging trends in the business world. Evaluate the reflections in terms of spelling and grammar, and in terms of evidence of critical thought. Provide a grade between 0 and 10, where 0 represents a very poor response and 10 represents a fantastic response."},
+                {"role": "system","content": "Students will provide you with short reflections on emerging trends in the business world. Evaluate the reflections in terms of the following: evidence of critical thought, proficiency with business or technology concepts. Provide a written explanation of your evaluation that is between 10 and 50 words long. Conclude with an overall evaluation between 1 and 5 where 1 represents very poor performance and 5 represents excellent performance."},
                 {"role": "user", "content": reflection}
             ]
         )
@@ -25,14 +25,3 @@ def index():
 
     result = request.args.get("result")
     return render_template("index.html", result=result)
-
-'''
-Sample prompt:
-
-Strong:
-I appreciated Walmart's implementation of sustainable practices. Their implementation of LED lighting and sustainable energy will likely have a measurable impact. I am not sure whether this is an example of greenwashing, though, because they provided their statistics in cumulative terms, rather than their annual emissions reductions.
-
-Weak:
-
-
-'''
