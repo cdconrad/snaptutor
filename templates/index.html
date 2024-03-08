@@ -11,8 +11,17 @@
 <body>
   <img src="{{ url_for('static', filename='book.PNG') }}" class="icon" />
   <h3>Reflection assessor</h3>
-  <h5>Enter a reflection on one of the textbook chapters below. OpenAI will assess your response in terms of 1) spelling and grammar and 2) the overall quality of your reflection.</h5>
+  <h5>Select the textbook that you are reading and enter a reflection.  OpenAI will assess your response in terms of 1) spelling and grammar and 2) the overall quality of your reflection.</h5>
   <form action="/" method="post">
+    <div>
+      <input type="radio" id="software" name="options" value="1">
+      <label for="software">Snappy Software</label>
+    </div>
+    <div>
+      <input type="radio" id="data" name="options" value="2">
+      <label for="data">Snappy Data Management</label>
+    </div>
+    <br>
     <textarea name="reflection" placeholder="Enter your reflection" required /></textarea>
     <input type="submit" value="Provide reflection" />
   </form>
