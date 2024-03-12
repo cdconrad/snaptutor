@@ -22,4 +22,5 @@ six==1.16.0
 toml==0.10.2
 tqdm==4.62.3
 urllib3==1.26.7
+waitress==3.0.0
 Werkzeug==2.0.2
